@@ -73,8 +73,7 @@ for (var i = 0; i < 1000; i++) {
   pGeo.vertices.push(vtx);
 }
 var ptc = new THREE.Points(pGeo, new THREE.PointsMaterial({
-  color: 0xffffff
-}));
+  map: ptcTex }));
 ptc.boundingSphere = 50;
 
 scene.add(ptc);
