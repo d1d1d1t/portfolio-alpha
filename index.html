@@ -55,7 +55,7 @@ scene.add( sphere );
 			
 			//PARTICLES
 			
-			var ptcTex = new THREE.TextureLoader().load( "textures/b-diamond2.png" );
+			
 			var distance = 100;
 var pGeo = new THREE.Geometry();
 
@@ -72,8 +72,12 @@ for (var i = 0; i < 1000; i++) {
 
   pGeo.vertices.push(vtx);
 }
-var ptc = new THREE.Points(pGeo, new THREE.PointsMaterial({
-  map: ptcTex }));
+var ptcMat = new THREE.ParticleBasicMaterial({ map: new THREE.TextureLoader().load( "textures/b-diamond2.png" )});
+var ptc = new THREE.Points(pGeo, ptcMat);
+
+			
+			
+			
 ptc.boundingSphere = 50;
 
 scene.add(ptc);
