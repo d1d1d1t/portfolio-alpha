@@ -51,10 +51,15 @@ var spMat = new THREE.MeshLambertMaterial({map: texture });
 var sphere = new THREE.Mesh( spG, spMat );
 scene.add( sphere );
 
-var spO = new THREE.SphereGeometry( 10, 64, 64, 2, 1.2 );
-var spOMat = new THREE.MeshBasicMaterial({color: 0xffffff, wireframe: true});
-var sphO = new THREE.Mesh( spO, spMat );
-scene.add( sphO );		
+var spO = new THREE.SphereBufferGeometry( 10, 60, 60 );
+
+var wFr = new THREE.WireframeGeometry( geometry );
+var line = new THREE.LineSegments( wFr );
+line.material.depthTest = false;
+line.material.opacity = 0.25;
+line.material.transparent = true;
+
+scene.add( line );		
 			
 			
 			camera.position.z = 20;
