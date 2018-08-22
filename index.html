@@ -40,6 +40,16 @@ scene.add( pLight3 );
 scene.background = fogColor;
 scene.fog = new THREE.Fog(fogColor, 0.0025, 300);
 
+			var geometry = new THREE.SphereBufferGeometry( 100, 100, 100 );
+
+var wireframe = new THREE.WireframeGeometry( geometry );
+
+var line = new THREE.LineSegments( wireframe );
+line.material.depthTest = false;
+line.material.opacity = 0.25;
+line.material.transparent = true;
+
+scene.add( line );
 			
 			var geometry = new THREE.SphereGeometry( 5, 32, 32 );
 var geometry = new THREE.SphereGeometry( 5, 32, 32 );
