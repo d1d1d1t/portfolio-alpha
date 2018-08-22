@@ -25,7 +25,7 @@
 			var geometry = new THREE.SphereGeometry( 5, 32, 32 );
 var geometry = new THREE.SphereGeometry( 5, 32, 32 );
 var material = new THREE.LineBasicMaterial( {color: 0xffff00, linewidth: 1} );
-var sphereW = new THREE.LineSegments( geometry, material );
+var sphereW = new THREE.Mesh( geometry, material );
 scene.add( sphereW );
 
 			
