@@ -47,7 +47,7 @@ var spTex = new THREE.TextureLoader().load( "textures/CF-1.jpg" );
 	
 		
 var spG = new THREE.SphereGeometry( 5, 32, 32);
-var spMat = new THREE.MeshLambertMaterial({map: spTex });
+var spMat = new THREE.MeshPhongMaterial({map: spTex });
 var sphere = new THREE.Mesh( spG, spMat );
 scene.add( sphere );
 
@@ -72,7 +72,9 @@ for (var i = 0; i < 1000; i++) {
 
   pGeo.vertices.push(vtx);
 }
-var ptcMat = new THREE.ParticleBasicMaterial({ map: new THREE.TextureLoader().load( "textures/b-diamond2.png" )});
+var ptcTex = new THREE.TextureLoader().load( "textures/b-diamond2.png" );			
+			
+var ptcMat = new THREE.ParticleBasicMaterial({ map: ptcTex});
 var ptc = new THREE.Points(pGeo, ptcMat);
 
 			
