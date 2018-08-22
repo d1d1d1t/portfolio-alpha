@@ -68,7 +68,7 @@ for (var i = 0; i < 1000; i++) {
   vtx.y = distance * Math.sin(theta) * Math.sin(phi);
   vtx.z = distance * Math.cos(theta);
 
-  pGeo.vertices.push(vertex);
+  pGeo.vertices.push(vtx);
 }
 var ptc = new THREE.PointCloud(pGeo, new THREE.PointCloudMaterial({
   color: 0xffffff
