@@ -40,30 +40,20 @@ scene.add( pLight3 );
 scene.background = fogColor;
 scene.fog = new THREE.Fog(fogColor, 0.0025, 300);
 
-			var geometry = new THREE.SphereBufferGeometry( 50, 50, 50 );
+			
 		
-			var geometry = new THREE.SphereGeometry( 5, 32, 32 );
-var geometry = new THREE.SphereGeometry( 5, 32, 32 );
-var material = new THREE.LineDashedMaterial( {
+var spG = new THREE.SphereGeometry( 5, 32, 32 );
+var spMat = new THREE.LineDashedMaterial( {
 	color: 0xffffff,
 	linewidth: 1,
 	scale: 1,
 	dashSize: 3,
 	gapSize: 1,
 } );
-var sphere = new THREE.Mesh( geometry, material );
+var sphere = new THREE.Mesh( spG, spMat );
 scene.add( sphere );
 
-		var material = new THREE.LineDashedMaterial( { color: 0xffffff, linewidth: 2 } );
-			
-			var geometry = new THREE.Geometry();
-geometry.vertices.push(new THREE.Vector3( -10, 0, 0) );
-geometry.vertices.push(new THREE.Vector3( 0, 10, 0) );
-geometry.vertices.push(new THREE.Vector3( 10, 0, 0) );
-			
-			var line = new THREE.Line( geometry, material );
-			
-			scene.add( line );
+		
 			
 			
 			camera.position.z = 30;
