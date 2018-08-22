@@ -22,14 +22,23 @@
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
 
-			var light = new THREE.PointLight( 0xff0000, 1, 100 );
-light.position.set( 50, 50, 50 );
-scene.add( light );
+			var pLight1 = new THREE.PointLight( 0xff0000, 1, 100 );
+pLight1.position.set( 50, 50, 50 );
+scene.add( pLight1 );
+			
+			var pLight2 = new THREE.PointLight( 0xffffe0, 1, 100 );
+pLight2.position.set( 10, 10, 50 );
+scene.add( pLight2 );
+			
+						var pLight3 = new THREE.PointLight( 0xadd8e6, 1, 100 );
+pLight3.position.set( 0, 20, -10 );
+scene.add( pLight3 );
+			
 			
 			var fogColor = new THREE.Color(0x7F8E9E);
  
 scene.background = fogColor;
-scene.fog = new THREE.Fog(fogColor, 0.0025, 150);
+scene.fog = new THREE.Fog(fogColor, 0.0025, 300);
 
 			
 			var geometry = new THREE.SphereGeometry( 5, 32, 32 );
