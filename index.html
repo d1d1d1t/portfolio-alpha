@@ -53,7 +53,7 @@ scene.add( sphere );
 
 var spO = new THREE.SphereBufferGeometry( 10, 60, 60 );
 
-var wFr = new THREE.WireframeGeometry( geometry );
+var wFr = new THREE.WireframeGeometry( spO );
 var line = new THREE.LineSegments( wFr );
 line.material.depthTest = false;
 line.material.opacity = 0.25;
