@@ -13,30 +13,34 @@
 		<script>
 			// Our Javascript will go here.
 			
-			var sc = new THREE.Scene();
-			var cam = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-				
-			var r = new THREE.WebGLRenderer();
-			r.setSize( window.innerWidth, window.innerHeight );
-			document.body.appendChild( r.domElement );
 			
-			var sphr = new THREE.SphereGeometry( 5, 32, 32 );
-			var mat = new THREE.MeshBasicMaterial( {color: 0xffff00} );
-			var orb = new THREE.Mesh( sphr, mat );
-			sc.add( orb );
-			
-			
-			
-			var anim = function () {
-				requestAnimationFrame( anim );
+				var scene = new THREE.Scene();
+			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
 
-				orb.rotation.x += 0.01;
-				orb.rotation.y += 0.01;
+			var renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
 
-				r.render( sc, cam );
+			var geometry = new THREE.SphereGeometry( 5, 32, 32 );
+			var material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
+			var sphere = new THREE.Mesh( geometry, material );
+			scene.add( sphere );
+			
+			
+			camera.position.z = 5;
+
+			var animate = function () {
+				requestAnimationFrame( animate );
+
+				sphere.rotation.x += 0.01;
+				sphere.rotation.y += 0.01;
+
+				renderer.render( scene, camera );
 			};
 
-			anim();
+			animate();
+			// Our Javascript will go here.
+		
 			
 			
 		</script>
