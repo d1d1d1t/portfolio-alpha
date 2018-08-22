@@ -51,7 +51,7 @@ var spMat = new THREE.MeshLambertMaterial({map: texture });
 var sphere = new THREE.Mesh( spG, spMat );
 scene.add( sphere );
 
-var sphO = new THREE.SphereBufferGeometry( 10, 60, 60 );
+var sphO = new THREE.SphereBufferGeometry( 7, 60, 60, 2, 1.2 );
 var wFr = new THREE.WireframeGeometry( sphO );
 var line = new THREE.LineSegments( wFr );
 
