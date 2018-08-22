@@ -26,11 +26,11 @@
 pLight1.position.set( 50, 50, 50 );
 scene.add( pLight1 );
 			
-			var pLight2 = new THREE.PointLight( 0xffffe0, .25, 100,.25 );
+			var pLight2 = new THREE.PointLight( 0xffffe0, .25, 80,.25 );
 pLight2.position.set( 10, 10, 50 );
 scene.add( pLight2 );
 			
-						var pLight3 = new THREE.PointLight( 0xadd8e6, .45, 100,.10 );
+						var pLight3 = new THREE.PointLight( 0xadd8e6, .45, 100,.30 );
 pLight3.position.set( -10, 20, -40 );
 scene.add( pLight3 );
 			
@@ -51,10 +51,13 @@ var spMat = new THREE.MeshStandardMaterial({map: texture });
 var sphere = new THREE.Mesh( spG, spMat );
 scene.add( sphere );
 
-		
+var spO = new THREE.SphereGeometry( 5, 32, 32 );
+var spOMat = new THREE.MeshBasicMaterial({color: 0xffffff, wireframe: true });
+var sphO = new THREE.Mesh( spO, spMat );
+scene.add( sphO );		
 			
 			
-			camera.position.z = 30;
+			camera.position.z = 20;
 
 			var animate = function () {
 				requestAnimationFrame( animate );
