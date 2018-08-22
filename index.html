@@ -51,16 +51,32 @@ var spMat = new THREE.MeshLambertMaterial({map: texture });
 var sphere = new THREE.Mesh( spG, spMat );
 scene.add( sphere );
 
-var sphO = new THREE.SphereBufferGeometry( 7, 60, 60, 2, 1.2 );
-var wFr = new THREE.WireframeGeometry( sphO );
-var line = new THREE.LineSegments( wFr );
 
-			line.material.depthTest = true;
-line.material.opacity = 0.85;
-line.material.transparent = true;
-
-scene.add( line );		
 			
+			//PARTICLES
+			var distance = 100;
+var pGeo = new THREE.Geometry();
+
+for (var i = 0; i < 1000; i++) {
+
+  var vtx = new THREE.Vector3();
+
+  var theta = THREE.Math.randFloatSpread(360);
+  var phi = THREE.Math.randFloatSpread(360);
+
+  vertex.x = distance * Math.sin(theta) * Math.cos(phi);
+  vertex.y = distance * Math.sin(theta) * Math.sin(phi);
+  vertex.z = distance * Math.cos(theta);
+
+  pGeo.vertices.push(vertex);
+}
+var ptc = new THREE.PointCloud(pGeo, new THREE.PointCloudMaterial({
+  color: 0xffffff
+}));
+ptc.boundingSphere = 50;
+
+scene.add(ptc);
+
 			
 			camera.position.z = 20;
 
