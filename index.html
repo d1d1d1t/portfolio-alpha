@@ -22,15 +22,15 @@
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
 
-			var pLight1 = new THREE.PointLight( 0xff0000, 1, 100,.5 );
+			var pLight1 = new THREE.PointLight( 0xff0000, .35, 100,.5 );
 pLight1.position.set( 50, 50, 50 );
 scene.add( pLight1 );
 			
-			var pLight2 = new THREE.PointLight( 0xffffe0, 1, 100,.25 );
+			var pLight2 = new THREE.PointLight( 0xffffe0, .25, 100,.25 );
 pLight2.position.set( 10, 10, 50 );
 scene.add( pLight2 );
 			
-						var pLight3 = new THREE.PointLight( 0xadd8e6, 1, 100,.10 );
+						var pLight3 = new THREE.PointLight( 0xadd8e6, .45, 100,.10 );
 pLight3.position.set( -10, 20, -40 );
 scene.add( pLight3 );
 			
