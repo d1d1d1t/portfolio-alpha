@@ -55,7 +55,7 @@ var sphO = new THREE.SphereBufferGeometry( 7, 60, 60, 2, 1.2 );
 var wFr = new THREE.WireframeGeometry( sphO );
 var line = new THREE.LineSegments( wFr );
 
-			line.material.depthTest = false;
+			line.material.depthTest = true;
 line.material.opacity = 0.85;
 line.material.transparent = true;
 
