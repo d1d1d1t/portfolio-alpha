@@ -1,0 +1,158 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @d1d1d1t Sign out
+507
+16,507 2,737 VincentGarreau/particles.js
+ Code  Issues 197  Pull requests 35  Projects 0  Wiki  Insights
+You’re editing a file in a project you don’t have write access to. Submitting a change to this file will write it to a new branch in your fork d1d1d1t/particles.js, so you can send a pull request.
+particles.js/demo/ 
+particles.json
+  or cancel
+    
+ 
+1
+{
+2
+  "particles": {
+3
+    "number": {
+4
+      "value": 80,
+5
+      "density": {
+6
+        "enable": true,
+7
+        "value_area": 800
+8
+      }
+9
+    },
+10
+    "color": {
+11
+      "value": "#ffffff"
+12
+    },
+13
+    "shape": {
+14
+      "type": "circle",
+15
+      "stroke": {
+16
+        "width": 0,
+17
+        "color": "#000000"
+18
+      },
+19
+      "polygon": {
+20
+        "nb_sides": 5
+21
+      },
+22
+      "image": {
+23
+        "src": "img/github.svg",
+24
+        "width": 100,
+25
+        "height": 100
+26
+      }
+27
+    },
+28
+    "opacity": {
+29
+      "value": 0.5,
+30
+      "random": false,
+31
+      "anim": {
+32
+        "enable": false,
+33
+        "speed": 1,
+34
+        "opacity_min": 0.1,
+35
+        "sync": false
+36
+      }
+37
+    },
+38
+    "size": {
+39
+      "value": 5,
+40
+      "random": true,
+41
+      "anim": {
+42
+        "enable": false,
+43
+        "speed": 40,
+44
+        "size_min": 0.1,
+45
+        "sync": false
+46
+      }
+47
+    },
+48
+    "line_linked": {
+49
+      "enable": true,
+50
+      "distance": 150,
+51
+      "color": "#ffffff",
+52
+      "opacity": 0.4,
+53
+      "width": 1
+54
+    },
+55
+    "move": {
+56
+      "enable": true,
+57
+      "speed": 6,
+58
+      "direction": "none",
+59
+      "random": false,
+60
+      "straight": false,
+@d1d1d1t
+Propose file change
+
+Update particles.json
+
+Add an optional extended description…
+ 
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Press h to open a hovercard with more details.
