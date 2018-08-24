@@ -57,6 +57,10 @@ var spMat = new THREE.MeshPhongMaterial({map: spTex });
 var sphere = new THREE.Mesh( spG, spMat );
 scene.add( sphere );
 
+			var tGeo = new THREE.TorusGeometry( 12, .3, 16, 80 );
+var tMat = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+var torus = new THREE.Mesh( tGeo, tMat );
+scene.add( torus );
 
 			
 			//PARTICLES
