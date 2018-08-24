@@ -73,37 +73,7 @@ var torus = new THREE.Mesh( tGeo, tMat );
 scene.add( torus );
 
 			
-			//PARTICLES
 			
-			
-			var distance = 100;
-var pGeo = new THREE.Geometry();
-
-for (var i = 0; i < 1000; i++) {
-
-  var vtx = new THREE.Vector3();
-
-  var theta = THREE.Math.randFloatSpread(360);
-  var phi = THREE.Math.randFloatSpread(360);
-
-  vtx.x = distance * Math.sin(theta) * Math.cos(phi);
-  vtx.y = distance * Math.sin(theta) * Math.sin(phi);
-  vtx.z = distance * Math.cos(theta);
-
-  pGeo.vertices.push(vtx);
-}
-var ptcTex = new THREE.TextureLoader().load( "textures/b-diamond.png" );			
-			
-var ptcMat = new THREE.ParticleBasicMaterial({ map: ptcTex, size: 5});
-var ptc = new THREE.Points(pGeo, ptcMat);
-
-			
-			
-			
-ptc.boundingSphere = 30;
-
-scene.add(ptc);
-
 			pLight1.position.x = 60;
 			pLight1.position.y = 20;
 			pLight1.position.z = 40;
