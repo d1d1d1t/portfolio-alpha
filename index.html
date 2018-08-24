@@ -78,7 +78,7 @@ var spAltBW = new THREE.TextureLoader().load( "textures/dead-world-specular.jpg"
 	
 		
 var spG = new THREE.SphereGeometry( 5, 32, 32);
-var spMat = new THREE.MeshPhongMaterial({map: spBW, emissive: 0x808080, emissiveMap: spEm, specularMap: spSpc, bumpMap: spAltBW});
+var spMat = new THREE.MeshPhongMaterial({map: spBW, emissive: 0x808080, emissiveMap: spAltBW, specularMap: spSpc, bumpMap: spAltBW});
 			
 var sphere = new THREE.Mesh( spG, spMat );
 scene.add( sphere );
