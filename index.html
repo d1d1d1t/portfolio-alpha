@@ -85,7 +85,7 @@ for (var i = 0; i < 1000; i++) {
 }
 var ptcTex = new THREE.TextureLoader().load( "textures/b-diamond.png" );			
 			
-var ptcMat = new THREE.ParticleBasicMaterial({ map: ptcTex});
+var ptcMat = new THREE.ParticleBasicMaterial({ map: ptcTex, size: 5});
 var ptc = new THREE.Points(pGeo, ptcMat);
 
 			
