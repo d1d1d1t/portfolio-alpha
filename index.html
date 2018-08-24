@@ -71,6 +71,12 @@ scene.add( sphere );
 var tMat = new THREE.MeshBasicMaterial( { color: 0xffffff } );
 var torus = new THREE.Mesh( tGeo, tMat );
 scene.add( torus );
+			
+			var plnTex = new THREE.TextureLoader().load( "textures/solar-eclipse.png" );
+			var plnGeo = new THREE.PlaneGeometry( 5, 20, 32 );
+var plnMat = new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide} );
+var pln = new THREE.Mesh( plnGeo, plnMat );
+scene.add( plane );
 
 			
 			
