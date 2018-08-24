@@ -21,10 +21,10 @@
 		
 		
 		<div id="particle-div"></div>
-		<div id="opt1"></div>
-		<div id="opt2"></div>
-		<div id="opt3"></div>
-		<div id="opt4"></div>
+		<div id="opt1"><a href="javascript:void(0)"></></div>
+		<div id="opt2"><a href="javascript:void(0)"></></div>
+		<div id="opt3"><a href="javascript:void(0)"></></div>
+		<div id="opt4"><a href="javascript:void(0)"></></div>
 		
 		<script src="js/three.js"></script>
 		<script src="js/particles.js"></script>
@@ -79,7 +79,7 @@ var spAltBW = new THREE.TextureLoader().load( "textures/dead-world-specular.jpg"
 		
 var spG = new THREE.SphereGeometry( 5, 32, 32);
 var spMat = new THREE.MeshPhongMaterial({map: spBW, emissive: 0xffffff, emissiveMap: spBW, specularMap: spAltBW  , 
-					 bumpMap: spAltBW, bumpScale: .5});
+					 bumpMap: spAltBW, bumpScale: 1});
 			
 var sphere = new THREE.Mesh( spG, spMat );
 scene.add( sphere );
