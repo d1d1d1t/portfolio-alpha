@@ -5,10 +5,13 @@
 		<title>portfolio-test</title>
 		<style>
 			body { margin: 0; }
-			canvas { width: 100%; height: 100%; background-image: url("textures/annular-solar-eclipse.jpg");  }
+			canvas { width: 100%; height: 100% }
+			#orb-ring{border-radius: 90px; width:600px; height:600px; border:5px dotted white;}
 		</style>
 	</head>
 	<body>
+		
+		<div id="orb-ring"></div>
 		<script src="js/three.js"></script>
 		<script>
 			// Our Javascript will go here.
@@ -72,7 +75,7 @@ for (var i = 0; i < 1000; i++) {
 
   pGeo.vertices.push(vtx);
 }
-var ptcTex = new THREE.TextureLoader().load( "textures/b-diamond2.png" );			
+var ptcTex = new THREE.TextureLoader().load( "textures/b-diamond.png" );			
 			
 var ptcMat = new THREE.ParticleBasicMaterial({ map: ptcTex});
 var ptc = new THREE.Points(pGeo, ptcMat);
@@ -80,7 +83,7 @@ var ptc = new THREE.Points(pGeo, ptcMat);
 			
 			
 			
-ptc.boundingSphere = 50;
+ptc.boundingSphere = 30;
 
 scene.add(ptc);
 
