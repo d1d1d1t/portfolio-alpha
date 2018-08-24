@@ -69,13 +69,15 @@ scene.add( pLight3 );
 		
 
 var spTex = new THREE.TextureLoader().load( "textures/dead-world.jpg" );
-			
+var spEm = new THREE.TextureLoader().load( "textures/dead-world-em.jpg" );
+var spSpc = new THREE.TextureLoader().load( "textures/dead-world-spec.jpg" );
+var spBW = new THREE.TextureLoader().load( "textures/dead-world-b&w.jpg" );
 			
 		
 	
 		
 var spG = new THREE.SphereGeometry( 5, 32, 32);
-var spMat = new THREE.MeshPhongMaterial({map: spTex, emissive: 0x808080, emissiveMap: spTex, specularMap: spTex});
+var spMat = new THREE.MeshPhongMaterial({map: spTex, emissive: 0x808080, emissiveMap: spEm, specularMap: spSpc, bumpMap: spBW, aoMap: spBW});
 			
 var sphere = new THREE.Mesh( spG, spMat );
 scene.add( sphere );
