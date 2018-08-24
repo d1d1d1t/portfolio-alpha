@@ -53,7 +53,8 @@ var spTex = new THREE.TextureLoader().load( "textures/CF-1.jpg" );
 	
 		
 var spG = new THREE.SphereGeometry( 5, 32, 32);
-var spMat = new THREE.MeshPhongMaterial({map: spTex });
+var spMat = new THREE.MeshPhongMaterial({map: spTex, emissive: 0xffffff });
+			
 var sphere = new THREE.Mesh( spG, spMat );
 scene.add( sphere );
 
