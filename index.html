@@ -62,7 +62,7 @@ var spTex = new THREE.TextureLoader().load( "textures/dead-world.jpg" );
 	
 		
 var spG = new THREE.SphereGeometry( 5, 32, 32);
-var spMat = new THREE.MeshPhongMaterial({map: spTex, color: 0x808080 });
+var spMat = new THREE.MeshPhongMaterial({map: spTex, color: 0x808080, emissiveMap: spTex });
 			
 var sphere = new THREE.Mesh( spG, spMat );
 scene.add( sphere );
