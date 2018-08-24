@@ -7,12 +7,14 @@
 			body { margin: 0; }
 			canvas{ width: 100%; height: 100% }
 			#particle-div{width:100%; height:100%; position:absolute}
+			#opt1{position: absolute; border: 5px solid red}
 		</style>
 	</head>
 	<body>
 		
 		
 		<div id="particle-div"></div>
+		<div id="opt1">option-1</div>
 		<script src="js/three.js"></script>
 		<script src="js/particles.js"></script>
 		<script src="js/jquery-3.3.1.min.js"></script>
@@ -62,7 +64,7 @@ var spTex = new THREE.TextureLoader().load( "textures/dead-world.jpg" );
 	
 		
 var spG = new THREE.SphereGeometry( 5, 32, 32);
-var spMat = new THREE.MeshPhongMaterial({map: spTex, color: 0x808080, emissiveMap: spTex, specularMap: spTex});
+var spMat = new THREE.MeshPhongMaterial({map: spTex, emissive: 0x808080, emissiveMap: spTex, specularMap: spTex});
 			
 var sphere = new THREE.Mesh( spG, spMat );
 scene.add( sphere );
