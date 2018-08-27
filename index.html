@@ -83,46 +83,51 @@ var torus = new THREE.Mesh( tGeo, tMat );
 scene.add( torus );
 			
 			
-			
-			var distance = 10;
-var navSph1 = new THREE.Geometry();
-
-for (var i = 0; i < 1000; i++) {
-
-  var sp1vert = new THREE.Vector3();
-
-  var sp1theta = THREE.Math.randFloatSpread(360);
-  var sp1phi = THREE.Math.randFloatSpread(360);
-
-  sp1vert.x = distance * Math.sin(sp1theta) * Math.cos(sp1phi);
-  sp1vert.y = distance * Math.sin(sp1theta) * Math.sin(sp1phi);
-  sp1vert.z = distance * Math.cos(sp1theta);
-
-  navSph1.vertices.push(sp1vert);
-}
-var sp1ptc = new THREE.PointCloud(navSph1, new THREE.PointCloudMaterial({
-  color: 0xffffff, size:1.5
-}));
-sp1ptc.boundingSphere = 50;
-
-scene.add(sp1ptc);
-sp1ptc.position.z = -5;
-sp1ptc.position.y = 7;			
+			var plT1 = new THREE.TextureLoader().load( "textures/grid1-trs.jpg" );
+			var plT2 = new THREE.TextureLoader().load( "textures/grid2-trs.jpg" );
+			var plT3 = new THREE.TextureLoader().load( "textures/grid3-trs.jpg" );
+			var plT4 = new THREE.TextureLoader().load( "textures/grid4-trs.jpg" );
+			var plT5 = new THREE.TextureLoader().load( "textures/grid5-trs.jpg" );
+			var plT6 = new THREE.TextureLoader().load( "textures/grid6-trs.jpg" );
+			var plT7 = new THREE.TextureLoader().load( "textures/grid7-trs.jpg" );
+			var plT8 = new THREE.TextureLoader().load( "textures/grid8-trs.jpg" );
 			
 			
+			var navS1 = new THREE.SphereGeometry( 5, 32, 32 );
+			var nsMat1 = new THREE.MeshBasicMaterial( {alphaMap: plT1, emissiveMap: plT1, emissive: 0xffd700} );
+			var nSphere1 = new THREE.Mesh( navS1, nsMat1 );
+			scene.add( nSphere1 );
 			
+			nSphere1.position.z = -5;
+			nSphere1.position.y = 7;			
+			
+			
+			var navS2 = new THREE.SphereGeometry( 5, 32, 32 );
+			var nsMat2 = new THREE.MeshBasicMaterial( {alphaMap: plT3, emissiveMap: plT3, emissive: 0xff0000} );
+			var nSphere2 = new THREE.Mesh( navS2, nsMat2 );
+			scene.add( nSphere2 );
 			
 	
-			//nSphere2.position.z = 2;
-			//nSphere2.position.x = 7;
+			nSphere2.position.z = 2;
+			nSphere2.position.x = 7;
+			
+			var navS3 = new THREE.SphereGeometry( 5, 32, 32 );
+			var nsMat3 = new THREE.MeshBasicMaterial( {alphaMap: plT5, emissiveMap: plT5, emissive: 0xadd8e6} );
+			var nSphere3 = new THREE.Mesh( navS3, nsMat3 );
+			scene.add( nSphere3 );
 			
 			
-			//nSphere3.position.z = 2;
-			//nSphere3.position.x = -7;
+			nSphere3.position.z = 2;
+			nSphere3.position.x = -7;
+			
+			var navS4 = new THREE.SphereGeometry( 5, 32, 32 );
+			var nsMat4 = new THREE.MeshBasicMaterial( {alphaMap: plT7, emissiveMap: plT7, emissive: 0x800080} );
+			var nSphere4 = new THREE.Mesh( navS4, nsMat4 );
+			scene.add( nSphere4 );
 			
 			
-			//nSphere4.position.z = 2;
-			//nSphere4.position.y = -7;
+			nSphere4.position.z = 2;
+			nSphere4.position.y = -7;
 			
 			
 			
