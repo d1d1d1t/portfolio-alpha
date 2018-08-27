@@ -98,6 +98,13 @@ scene.add( torus );
 			var nSphere1 = new THREE.Mesh( navS1, nsMat1 );
 			scene.add( nSphere1 );
 			
+			var ns1 = new THREE.SphereGeometry(  2, 24,24 );
+			var nM1 = new THREE.MeshPhongMaterial( {color: 0xffd700, alphaMap: plT6, emissiveMap: plT6, emissive: 0xffd700,emissiveIntensity:1, transparent: true} );
+			var nS1 = new THREE.Mesh( ns1, nM1 );
+			scene.add( nS1 );
+			
+			
+			
 			nSphere1.position.z = 2;
 			nSphere1.position.y = 10;			
 			
@@ -107,24 +114,36 @@ scene.add( torus );
 			var nSphere2 = new THREE.Mesh( navS2, nsMat2 );
 			scene.add( nSphere2 );
 			
+			var ns2 = new THREE.SphereGeometry(  2, 24,24 );
+			var nM2 = new THREE.MeshPhongMaterial( {color: 0xffd700, alphaMap: plT6, emissiveMap: plT6, emissive: 0xffd700,emissiveIntensity:1, transparent: true} );
+			var nS2 = new THREE.Mesh( ns2, nM2 );
+			scene.add( nS2 );
 	
 			nSphere2.position.z = 2;
 			nSphere2.position.x = 10;
 			
 			var navS3 = new THREE.SphereGeometry(  2, 24,24 );
-			var nsMat3 = new THREE.MeshPhongMaterial( {color: 0xadd8e6, alphaMap: plT1, emissiveMap: plT1, emissive: 0xadd8e6,emissiveIntensity:1, transparent: true} );
+			var nsMat3 = new THREE.MeshPhongMaterial( {color: 0xadd8e6, emissive: 0xadd8e6,emissiveIntensity:1} );
 			var nSphere3 = new THREE.Mesh( navS3, nsMat3 );
 			scene.add( nSphere3 );
 			
+			var ns3 = new THREE.SphereGeometry(  2, 24,24 );
+			var nM3 = new THREE.MeshPhongMaterial( {color: 0xffd700, emissive: 0xffd700,emissiveIntensity:1} );
+			var nS3 = new THREE.Mesh( ns3, nM3 );
+			scene.add( nS3 );
 			
 			nSphere3.position.z = 2;
 			nSphere3.position.x = -10;
 			
 			var navS4 = new THREE.SphereGeometry( 2, 24,24 );
-			var nsMat4 = new THREE.MeshPhongMaterial( {color: 0x800080, alphaMap: plT4, emissiveMap: plT4, emissive: 0x800080,emissiveIntensity:1, transparent: true} );
+			var nsMat4 = new THREE.MeshPhongMaterial( {color: 0x800080, emissive: 0x800080,emissiveIntensity:1} );
 			var nSphere4 = new THREE.Mesh( navS4, nsMat4 );
 			scene.add( nSphere4 );
 			
+			var ns4 = new THREE.SphereGeometry(  2, 24,24 );
+			var nM4 = new THREE.MeshPhongMaterial( {color: 0xffd700, emissive: 0xffd700,emissiveIntensity:1 } );
+			var nS4 = new THREE.Mesh( ns4, nM4 );
+			scene.add( nS4 );
 			
 			nSphere4.position.z = 2;
 			nSphere4.position.y = -10;
