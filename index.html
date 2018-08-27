@@ -67,10 +67,7 @@ var spSpc = new THREE.TextureLoader().load( "textures/dead-world-spec.jpg" );
 var spBW = new THREE.TextureLoader().load( "textures/dead-world-b&w.jpg" );
 var spAltBW = new THREE.TextureLoader().load( "textures/dead-world-specular.jpg" );
 			
-var pTex1 = new THREE.TextureLoader().load( "textures/planetTex1.jpg" );		
-var pTex2 = new THREE.TextureLoader().load( "textures/planetTex2.jpg" );
-var pTex3 = new THREE.TextureLoader().load( "textures/planetTex3.jpg" );
-var pTex4 = new THREE.TextureLoader().load( "textures/planetTex4.jpg" );
+
 	
 		
 var spG = new THREE.SphereGeometry( 5, 32, 32);
@@ -86,12 +83,34 @@ var torus = new THREE.Mesh( tGeo, tMat );
 scene.add( torus );
 			
 			
-			var navSp1 = new THREE.SphereGeometry(.5, 6, 6);
-			var navSpMat1 = new THREE.MeshPhongMaterial({map: pTex1,color: 0xffd700 });
-			var nSphere1 = new THREE.Mesh(navSp1, navSpMat1);
-			scene.add(nSphere1);
-			nSphere1.position.z = 2;
-			nSphere1.position.y = 7;
+			
+			var distance = 100;
+var navSph1 = new THREE.Geometry();
+
+for (var i = 0; i < 1000; i++) {
+
+  var sp1vert = new THREE.Vector3();
+
+  var sp1theta = THREE.Math.randFloatSpread(360);
+  var sp1phi = THREE.Math.randFloatSpread(360);
+
+  sp1vert.x = distance * Math.sin(sp1theta) * Math.cos(sp1phi);
+  sp1vert.y = distance * Math.sin(sp1theta) * Math.sin(sp1phi);
+  sp1vert.z = distance * Math.cos(sp1theta);
+
+  navSph1.vertices.push(sp1vert);
+}
+var sp1ptc = new THREE.PointCloud(geometry, new THREE.PointCloudMaterial({
+  color: 0xffffff
+}));
+sp1ptc.boundingSphere = 50;
+
+scene.add(sp1ptc);
+nSphere1.position.z = 2;
+nSphere1.position.y = 7;			
+			
+			
+			
 			
 			var navSp2 = new THREE.SphereGeometry(.5, 6, 6);
 			var navSpMat2 = new THREE.MeshPhongMaterial({map: pTex2,color: 0x90ee90  });
