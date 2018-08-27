@@ -94,14 +94,14 @@ scene.add( torus );
 			var nSphere2 = new THREE.Mesh(navSp2, navSpMat2);
 			scene.add(nSphere2);
 			nSphere2.position.z = 5;
-			nSphere1.position.x = 10;
+			nSphere2.position.x = 10;
 			
 			var navSp3 = new THREE.SphereGeometry(2, 12, 12);
 			var navSpMat3 = new THREE.MeshPhongMaterial({color: 0xadd8e6, emissive: 0xadd8e6, wireframe:true});
 			var nSphere3 = new THREE.Mesh(navSp3, navSpMat3);
 			scene.add(nSphere3);
-			nSphere1.position.z = 5;
-			nSphere1.position.x = -10;
+			nSphere3.position.z = 5;
+			nSphere3.position.x = -10;
 			
 			var navSp4 = new THREE.SphereGeometry(2, 12, 12);
 			var navSpMat4 = new THREE.MeshPhongMaterial({color: 0x800080, emissive: 0x800080, wireframe:true});
