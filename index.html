@@ -84,27 +84,27 @@ scene.add( torus );
 			
 			
 			var navSp1 = new THREE.SphereGeometry(2, 12, 12);
-			var navSpMat1 = new THREE.MeshPhongMaterial({color: 0xffd700, emissive: 0xffd700});
+			var navSpMat1 = new THREE.MeshPhongMaterial({color: 0xffd700, emissive: 0xffd700, wireframe:true});
 			var nSphere1 = new THREE.Mesh(navSp1, navSpMat1);
 			scene.add(nSphere1);
 			nSphere1.position.z = 10;
 			
 			var navSp2 = new THREE.SphereGeometry(2, 12, 12);
-			var navSpMat2 = new THREE.MeshPhongMaterial({color: 0x90ee90, emissive: 0x90ee90});
+			var navSpMat2 = new THREE.MeshPhongMaterial({color: 0x90ee90, emissive: 0x90ee90, wireframe:true});
 			var nSphere2 = new THREE.Mesh(navSp2, navSpMat2);
 			scene.add(nSphere2);
 			nSphere2.position.z = 5;
 			nSphere1.position.x = 10;
 			
 			var navSp3 = new THREE.SphereGeometry(2, 12, 12);
-			var navSpMat3 = new THREE.MeshPhongMaterial({color: 0xadd8e6, emissive: 0xadd8e6});
+			var navSpMat3 = new THREE.MeshPhongMaterial({color: 0xadd8e6, emissive: 0xadd8e6, wireframe:true});
 			var nSphere3 = new THREE.Mesh(navSp3, navSpMat3);
 			scene.add(nSphere3);
 			nSphere1.position.z = 5;
 			nSphere1.position.x = -10;
 			
 			var navSp4 = new THREE.SphereGeometry(2, 12, 12);
-			var navSpMat4 = new THREE.MeshPhongMaterial({color: 0x800080, emissive: 0x800080});
+			var navSpMat4 = new THREE.MeshPhongMaterial({color: 0x800080, emissive: 0x800080, wireframe:true});
 			var nSphere4 = new THREE.Mesh(navSp4, navSpMat4);
 			scene.add(nSphere4);
 			nSphere4.position.z = -10;
