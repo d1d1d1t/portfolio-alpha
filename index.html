@@ -84,7 +84,7 @@ scene.add( torus );
 			
 			
 			
-			var distance = 5;
+			var distance = 10;
 var navSph1 = new THREE.Geometry();
 
 for (var i = 0; i < 1000; i++) {
@@ -101,7 +101,7 @@ for (var i = 0; i < 1000; i++) {
   navSph1.vertices.push(sp1vert);
 }
 var sp1ptc = new THREE.PointCloud(navSph1, new THREE.PointCloudMaterial({
-  color: 0xffffff, size:1
+  color: 0xffffff, size:1.5
 }));
 sp1ptc.boundingSphere = 50;
 
