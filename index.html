@@ -103,6 +103,15 @@ scene.add( torus );
 			var nS1 = new THREE.Mesh( ns1, nM1 );
 			scene.add( nS1 );
 			
+			var pln1Tex = new THREE.TextureLoader().load( "textures/solar-eclipse.png" );
+			var pln1Geo = new THREE.PlaneGeometry( 4, 8, 16  );
+			var pln1Mat = new THREE.MeshBasicMaterial( {map: pln1Tex, side: THREE.DoubleSide} );
+			var pln1 = new THREE.Mesh( pln1Geo, pln1Mat );
+			scene.add( pln1 );
+			
+			pln1.position.z = 2;
+			pln1.position.y = 10;
+			
 			nS1.position.z = 2;
 			nS1.position.y = 10;
 			
@@ -120,6 +129,15 @@ scene.add( torus );
 			var nS2 = new THREE.Mesh( ns2, nM2 );
 			scene.add( nS2 );
 	
+			var pln2Tex = new THREE.TextureLoader().load( "textures/solar-eclipse.png" );
+			var pln2Geo = new THREE.PlaneGeometry( 4, 8, 16  );
+			var pln2Mat = new THREE.MeshBasicMaterial( {map: pln2Tex, side: THREE.DoubleSide} );
+			var pln2 = new THREE.Mesh( pln2Geo, pln2Mat );
+			scene.add( pln2 );
+			
+			pln2.position.z = 2;
+			pln2.position.x = 10;
+			
 			nS2.position.z = 2;
 			nS2.position.x = 10;
 			
@@ -135,6 +153,15 @@ scene.add( torus );
 			var nM3 = new THREE.MeshPhongMaterial( {color: 0xffa500, emissive: 0xffa500,emissiveIntensity:1} );
 			var nS3 = new THREE.Mesh( ns3, nM3 );
 			scene.add( nS3 );
+			
+			var pln3Tex = new THREE.TextureLoader().load( "textures/solar-eclipse.png" );
+			var pln3Geo = new THREE.PlaneGeometry( 4, 8, 16  );
+			var pln3Mat = new THREE.MeshBasicMaterial( {map: pln3Tex, side: THREE.DoubleSide} );
+			var pln3 = new THREE.Mesh( pln3Geo, pln3Mat );
+			scene.add( pln3 );
+			
+			pln3.position.z = 2;
+			pln3.position.x = -10;
 			
 			nS3.position.z = 2;
 			nS3.position.x = -10;
@@ -152,6 +179,15 @@ scene.add( torus );
 			var nS4 = new THREE.Mesh( ns4, nM4 );
 			scene.add( nS4 );
 			
+			var pln4Tex = new THREE.TextureLoader().load( "textures/solar-eclipse.png" );
+			var pln4Geo = new THREE.PlaneGeometry( 4, 8, 16 );
+			var pln4Mat = new THREE.MeshBasicMaterial( {map: pln4Tex, side: THREE.DoubleSide} );
+			var pln4 = new THREE.Mesh( pln4Geo, pln4Mat );
+			scene.add( pln4 );
+			
+			pln4.position.z = 2;
+			pln4.position.y = -10;
+			
 			nS4.position.z = 2;
 			nS4.position.y = -10;
 			
@@ -164,9 +200,9 @@ scene.add( torus );
 			
 			var plnTex = new THREE.TextureLoader().load( "textures/solar-eclipse.png" );
 			var plnGeo = new THREE.PlaneGeometry( 15, 13, 32 );
-var plnMat = new THREE.MeshBasicMaterial( {map: plnTex, side: THREE.DoubleSide} );
-var pln = new THREE.Mesh( plnGeo, plnMat );
-scene.add( pln );
+			var plnMat = new THREE.MeshBasicMaterial( {map: plnTex, side: THREE.DoubleSide} );
+			var pln = new THREE.Mesh( plnGeo, plnMat );
+			scene.add( pln );
 
 			
 			
