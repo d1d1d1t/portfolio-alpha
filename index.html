@@ -84,10 +84,10 @@ scene.add( torus );
 			
 			
 			var plT1 = new THREE.TextureLoader().load( "textures/grid1-trs.jpg" );
-			//var plT2 = new THREE.TextureLoader().load( "textures/grid2-trs.jpg" );
+			var plT2 = new THREE.TextureLoader().load( "textures/grid2-trs.png" );
 			var plT3 = new THREE.TextureLoader().load( "textures/grid3-trs.png" );
 			//var plT4 = new THREE.TextureLoader().load( "textures/grid4-trs.jpg" );
-			var plT5 = new THREE.TextureLoader().load( "textures/grid5-trs.png" );
+			//var plT5 = new THREE.TextureLoader().load( "textures/grid5-trs.png" );
 			//var plT6 = new THREE.TextureLoader().load( "textures/grid6-trs.jpg" );
 			var plT7 = new THREE.TextureLoader().load( "textures/grid7-trs.jpg" );
 			//var plT8 = new THREE.TextureLoader().load( "textures/grid8-trs.jpg" );
@@ -112,7 +112,7 @@ scene.add( torus );
 			nSphere2.position.x = 7;
 			
 			var navS3 = new THREE.SphereGeometry( 5, 32, 32 );
-			var nsMat3 = new THREE.MeshPhongMaterial( {alphaMap: plT5, emissiveMap: plT5, emissive: 0xadd8e6, transparent: true} );
+			var nsMat3 = new THREE.MeshPhongMaterial( {alphaMap: plT2, emissiveMap: plT2, emissive: 0xadd8e6, transparent: true} );
 			var nSphere3 = new THREE.Mesh( navS3, nsMat3 );
 			scene.add( nSphere3 );
 			
