@@ -57,6 +57,9 @@
 
 			var material = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: textureCube } );
 			
+			var spEnv = new THREE.Mesh(new THREE.BoxGeometry(500, 500, 500), material);
+			scene.add(spEnv);
+			
 			var pLight1 = new THREE.PointLight( 0xff0000, 1, 100,.5 );
 pLight1.position.set( 50, 50, 50 );
 scene.add( pLight1 );
