@@ -106,13 +106,7 @@ scene.add( torus );
 			nSphere1.position.z = 2;
 			nSphere1.position.y = 10;
 			
-			var domEvents	= new THREEx.DomEvents();
-			nSphere1.on('click', function(object3d){ 
-				console.log('you clicked on the nSphere1');  });
-			
-			
-			
-			
+				
 			
 			
 			var navS2 = new THREE.SphereGeometry(  2, 24,24 );
@@ -179,6 +173,33 @@ scene.add( torus );
 			
 			camera.position.z = 20; 
 
+			
+			nSphere1.callback = function() { console.log( this.name ); }
+			
+			var raycaster = new THREE.Raycaster();
+			var mouse = new THREE.Vector2();
+
+			function onDocumentMouseDown( event ) {
+
+    			event.preventDefault();
+
+    			mouse.x = ( event.clientX / renderer.domElement.clientWidth ) * 2 - 1;
+    			mouse.y = - ( event.clientY / renderer.domElement.clientHeight ) * 2 + 1;
+
+   			 raycaster.setFromCamera( mouse, camera );
+
+			    var intersects = raycaster.intersectObjects( objects ); 
+
+   			 if ( intersects.length > 0 ) {
+
+       			 intersects[0].object.callback();
+
+   				 }
+
+			}
+			
+			
+			
 			var animate = function () {
 				requestAnimationFrame( animate );
 			
