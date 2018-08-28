@@ -44,7 +44,7 @@
 			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
 
 			var renderer = new THREE.WebGLRenderer();
-			var domEvents	= new THREEx.DomEvents(camera, renderer.domElement);
+			 
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild(renderer.domElement);
 		
@@ -107,12 +107,8 @@ scene.add( torus );
 			nSphere1.position.z = 2;
 			nSphere1.position.y = 10;
 			
-			var url = '#';
-			var nS1Link = THREEx.Linkify(domEvents, nSphere1, url, true);
+		
 			
-			domEvents.addEventListener( nSphere1, 'click', function(event){
-				console.log('clicked nSphere1');
-			}, false);
 				
 			
 			
@@ -180,7 +176,42 @@ scene.add( torus );
 			
 			camera.position.z = 20; 
 
-						
+			
+			var raycaster = new THREE.Raycaster();
+var mouse = new THREE.Vector2();
+
+function onMouseMove( event ) {
+
+	// calculate mouse position in normalized device coordinates
+	// (-1 to +1) for both components
+
+	mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+	mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+}
+
+function render() {
+
+	// update the picking ray with the camera and mouse position
+	raycaster.setFromCamera( mouse, camera );
+
+	// calculate objects intersecting the picking ray
+	var intersects = raycaster.intersectObjects( scene.children );
+
+	for ( var i = 0; i < intersects.length; i++ ) {
+
+		intersects[ i ].object.material.color.set( 0xff0000 );
+
+	}
+
+	
+
+}
+
+window.addEventListener( 'mousemove', onMouseMove, false );
+
+
+			
 			
 			
 			var animate = function () {
