@@ -29,10 +29,10 @@
 			$(document).ready(function(){
 				var ptcGen = new particlesJS.load('particle-div','particles.json');
 			
-			
-			
 			});
 		</script>
+		
+		
 		
 		
 		<script>
@@ -200,9 +200,17 @@ scene.add( torus );
 			animate();
 			// Our Javascript will go here.
 		
+			
+			
+		</script>
 		
-			
-			
+		<script>
+		var domEvents	= new THREEx.DomEvents(camera, renderer.domElement)
+		
+		domEvents.addEventListener(nSphere1, 'mouseover', function(event){
+	console.log('you clicked on the nav1')
+}, false)
+		
 		</script>
 	</body>
 </html>
