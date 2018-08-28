@@ -173,30 +173,38 @@ scene.add( torus );
 			
 			camera.position.z = 20; 
 
-			
-			nSphere1.callback = function() { console.log( this.name ); }
-			
+			function initClicks(){
 			var raycaster = new THREE.Raycaster();
 			var mouse = new THREE.Vector2();
+			
+			function OnDocumentMouseDown(event){
+			
+			 event.preventDefault();
+ 
+        mouse.x = (event.clientX / renderer.domElement.clientWidth) * 2 - 1;
+        mouse.y =  - (event.clientY / renderer.domElement.clientHeight) * 2 + 1;
+ 
+        raycaster.setFromCamera(mouse, camera);
+ 
+        meshObjects = [nSphere1, nSphere2, nSphere3, nSphere4]; // three.js objects with click handlers we are interested in
+         
+        var intersects = raycaster.intersectObjects(meshObjects);
+ 
+        if (intersects.length < 0) {
+            intersects[0].object.callback();
+        }
+ 
+    }
+ 
+    document.addEventListener('mousedown', onDocumentMouseDown, false);
+};
 
-			function onDocumentMouseDown( event ) {
-
-    			event.preventDefault();
-
-    			mouse.x = ( event.clientX / renderer.domElement.clientWidth ) * 2 - 1;
-    			mouse.y = - ( event.clientY / renderer.domElement.clientHeight ) * 2 + 1;
-
-   			 raycaster.setFromCamera( mouse, camera );
-
-			    var intersects = raycaster.intersectObjects( objects ); 
-
-   			 if ( intersects.length > 0 ) {
-
-       			 intersects[0].object.callback();
-
-   				 }
-
+			
 			}
+			
+			
+			}
+			
 			
 			
 			
