@@ -110,6 +110,13 @@ scene.add( torus );
 			var pln1 = new THREE.Mesh( pln1Geo, pln1Mat );
 			scene.add( pln1 );
 			
+			var nSLight1 = new THREE.PointLight( 0xffd700, 1, 100 );
+			nsLight1.position.set( 50, 50, 50 );
+			scene.add( nsLight1 );
+			
+			nsLight1.position.z = 2;
+			nsLight1.position.y = 10;
+			
 			pln1.position.z = 2;
 			pln1.position.y = 10;
 			
@@ -123,8 +130,7 @@ scene.add( torus );
 			var nsMat2 = new THREE.MeshPhongMaterial( {color: 0xff0000, alphaMap: plT6, emissiveMap: plT6, emissive: 0xff0000,emissiveIntensity:3, transparent: true} );
 			var nSphere2 = new THREE.Mesh( navS2, nsMat2 );
 			scene.add( nSphere2 );
-			
-			
+					
 	
 			var pln2Tex = new THREE.TextureLoader().load( "textures/solar-eclipse.png" );
 			var pln2Geo = new THREE.PlaneGeometry( 7, 6, 16  );
@@ -132,11 +138,17 @@ scene.add( torus );
 			var pln2 = new THREE.Mesh( pln2Geo, pln2Mat );
 			scene.add( pln2 );
 			
+			var nSLight2 = new THREE.PointLight( 0xffd700, 1, 100 );
+			nsLight2.position.set( 50, 50, 50 );
+			scene.add( nsLight2 );
+			
+			nsLight2.position.z = 2;
+			nsLight2.position.x = 10;
+			
 			pln2.position.z = 2;
 			pln2.position.x = 10;
 			
 		
-			
 			nSphere2.position.z = 2;
 			nSphere2.position.x = 10;
 			
@@ -151,6 +163,14 @@ scene.add( torus );
 			var pln3Mat = new THREE.MeshBasicMaterial( {map: pln3Tex, side: THREE.DoubleSide} );
 			var pln3 = new THREE.Mesh( pln3Geo, pln3Mat );
 			scene.add( pln3 );
+			
+			var nSLight3 = new THREE.PointLight( 0xffd700, 1, 100 );
+			nsLight3.position.set( 50, 50, 50 );
+			scene.add( nsLight3 );
+			
+			nsLight3.position.z = 2;
+			nsLight3.position.x = -10;
+			
 			
 			pln3.position.z = 2;
 			pln3.position.x = -10;
@@ -171,6 +191,13 @@ scene.add( torus );
 			var pln4Mat = new THREE.MeshBasicMaterial( {map: pln4Tex, side: THREE.DoubleSide} );
 			var pln4 = new THREE.Mesh( pln4Geo, pln4Mat );
 			scene.add( pln4 );
+			
+			var nSLight4 = new THREE.PointLight( 0xffd700, 1, 100 );
+			nsLight4.position.set( 50, 50, 50 );
+			scene.add( nsLight4 );
+			
+			nsLight3.position.z = 2;
+			nsLight3.position.y = -10;
 			
 			pln4.position.z = 2;
 			pln4.position.y = -10;
