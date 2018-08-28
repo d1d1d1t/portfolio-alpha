@@ -44,6 +44,7 @@
 			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
 
 			var renderer = new THREE.WebGLRenderer();
+			var domEvents	= new THREEx.DomEvents(camera, renderer.domElement);
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild(renderer.domElement);
 		
@@ -106,6 +107,12 @@ scene.add( torus );
 			nSphere1.position.z = 2;
 			nSphere1.position.y = 10;
 			
+			var url = '#';
+			var nS1Link = THREEx.Linkify(domEvents, nSphere1, url, true);
+			
+			domEvents.addEventListener( nSphere1, 'click', function(event){
+				console.log('clicked nSphere1');
+			}, false);
 				
 			
 			
