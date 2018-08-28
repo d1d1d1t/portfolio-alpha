@@ -56,7 +56,7 @@
 			] );
 
 			var material = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: textureCube } );
-			
+			material.map.minFilter = THREE.LinearFilter;
 			var spEnv = new THREE.Mesh(new THREE.BoxGeometry(500, 500, 500), material);
 			scene.add(spEnv);
 			
