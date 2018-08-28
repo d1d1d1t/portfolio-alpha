@@ -46,19 +46,7 @@
 			document.body.appendChild(renderer.domElement);
 		
 
-			var loader = new THREE.CubeTextureLoader();
-			loader.setPath( 'textures/' );
-
-			var textureCube = loader.load( [
-			'sp3x1.jpg', 'sp3x2.jpg',
-			'sp3y1.jpg', 'sp3y2.jpg',
-			'sp3z1.jpg', 'sp3z2.jpg'
-			] );
-
-			var material = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: textureCube } );
-			material.envMap.minFilter = THREE.LinearFilter;
-			var spEnv = new THREE.Mesh(new THREE.BoxGeometry(500, 500, 500), material);
-			scene.add(spEnv);
+			
 			
 			var pLight1 = new THREE.PointLight( 0xff0000, 1, 100,.5 );
 pLight1.position.set( 50, 50, 50 );
