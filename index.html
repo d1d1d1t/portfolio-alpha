@@ -99,14 +99,20 @@ scene.add( torus );
 			
 			
 			var navS1 = new THREE.SphereGeometry(  2, 24,24 );
-			var nsMat1 = new THREE.MeshPhongMaterial( {color: 0xffd700, alphaMap: plT6, emissiveMap: plT6, emissive: 0xffd700,emissiveIntensity:3, transparent: true} );
+			var nsMat1 = new THREE.MeshLambertMaterial( {color: 0xffd700, alphaMap: plT6, emissiveMap: plT6, emissive: 0xffd700,emissiveIntensity:3, transparent: true} );
 			var nSphere1 = new THREE.Mesh( navS1, nsMat1 );
 			scene.add( nSphere1 );
 			
 			nSphere1.position.z = 2;
 			nSphere1.position.y = 10;
 			
-				
+			var domEvents	= new THREEx.DomEvents(camera, renderer.domElement);
+			
+			domEvents.addEventListener(nSphere1, 'click', function(event){
+			console.log('you clicked on the nSphere1')
+			}, false);
+			
+			
 			
 			
 			var navS2 = new THREE.SphereGeometry(  2, 24,24 );
