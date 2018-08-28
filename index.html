@@ -110,12 +110,7 @@ scene.add( torus );
 			var pln1 = new THREE.Mesh( pln1Geo, pln1Mat );
 			scene.add( pln1 );
 			
-			var nsLight1 = new THREE.PointLight( 0xffd700, 1, 100 );
-			nsLight1.position.set( 50, 50, 50 );
-			scene.add( nsLight1 );
-			
-			nsLight1.position.z = 2;
-			nsLight1.position.y = 10;
+		
 			
 			pln1.position.z = 2;
 			pln1.position.y = 10;
@@ -138,12 +133,7 @@ scene.add( torus );
 			var pln2 = new THREE.Mesh( pln2Geo, pln2Mat );
 			scene.add( pln2 );
 			
-			var nsLight2 = new THREE.PointLight( 0xffd700, 1, 100 );
-			nsLight2.position.set( 50, 50, 50 );
-			scene.add( nsLight2 );
 			
-			nsLight2.position.z = 2;
-			nsLight2.position.x = 10;
 			
 			pln2.position.z = 2;
 			pln2.position.x = 10;
@@ -163,13 +153,7 @@ scene.add( torus );
 			var pln3Mat = new THREE.MeshBasicMaterial( {map: pln3Tex, side: THREE.DoubleSide} );
 			var pln3 = new THREE.Mesh( pln3Geo, pln3Mat );
 			scene.add( pln3 );
-			
-			var nsLight3 = new THREE.PointLight( 0xffd700, 1, 100 );
-			nsLight3.position.set( 50, 50, 50 );
-			scene.add( nsLight3 );
-			
-			nsLight3.position.z = 2;
-			nsLight3.position.x = -10;
+		
 			
 			
 			pln3.position.z = 2;
@@ -192,12 +176,7 @@ scene.add( torus );
 			var pln4 = new THREE.Mesh( pln4Geo, pln4Mat );
 			scene.add( pln4 );
 			
-			var nsLight4 = new THREE.PointLight( 0xffd700, 1, 100 );
-			nsLight4.position.set( 50, 50, 50 );
-			scene.add( nsLight4 );
 			
-			nsLight3.position.z = 2;
-			nsLight3.position.y = -10;
 			
 			pln4.position.z = 2;
 			pln4.position.y = -10;
