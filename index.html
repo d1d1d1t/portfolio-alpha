@@ -197,24 +197,9 @@ scene.add( torus );
 				
 				for (var i = 0; i < intersects.length; i++)
 				{
-					//intersects[i].object.material.color.set(0xff0000);
+					intersects[i].object.material.color.set(0xff0000);
 				if (intersects[i].object.geometry.type == 'SphereGeometry'){	
-					if(intersects == 0){
-        				intersects[0].object.material.color.set(0xff0000);
-						console.log(intersects[i].object.name);
-					}else	
-   					if(intersects == 1){
-        				intersects[1].object.material.color.set(0xff0000);
-						console.log(intersects[i].object.name);
-     						}else
-					if(intersects == 2){
-        				intersects[2].object.material.color.set(0xff0000);
-						console.log(intersects[i].object.name);
-     					 	}else
-					 if(intersects == 3){
-        				intersects[3].object.material.color.set(0xff0000);
-						 console.log(intersects[i].object.name);
-     					 	}
+					intersects[i].object.material.color.set(0xff0000);
 							
    					
 					}
