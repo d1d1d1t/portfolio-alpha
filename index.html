@@ -199,7 +199,7 @@ scene.add( torus );
 				spheres[2] = nSphere3;
 				spheres[3] = nSphere4;
 		
-					var intersects = ray.intersectObjects(spheres);
+					var intersects = ray.intersectObjects(scene.children);
 				
 				for (var i = 0; i < intersects.length; i++)
 				{
