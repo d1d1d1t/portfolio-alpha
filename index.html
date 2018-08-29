@@ -197,10 +197,11 @@ scene.add( torus );
 				
 				for (var i = 0; i < intersects.length; i++)
 				{
+					
+				 switch(intersects[ 0 ].object.geometry.type){
+					 case 'SphereGeometry':	
 					intersects[i].object.material.color.set(0xff0000);
-				if (intersects[i].object.geometry.type == 'SphereGeometry'){	
-					intersects[i].object.material.color.set(0xff0000);
-							
+						break;	
    					
 					}
 					
