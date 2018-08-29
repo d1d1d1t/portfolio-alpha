@@ -192,27 +192,37 @@ scene.add( torus );
 			
 				ray.setFromCamera(mouse, camera);
 				
-				var intersects = ray.intersectObjects(scene.children);
+				var spheres = [];
+				
+				spheres[0] = nSphere1;
+				spheres[1] = nSphere2;
+				spheres[2] = nSphere3;
+				spheres[3] = nSphere4;
+		
+					var intersects = ray.intersectObjects(spheres);
 				
 				for (var i = 0; i < intersects.length; i++)
 				{
 					//intersects[i].object.material.color.set(0xff0000);
-					switch(intersects[0].object.geometry.name){ case 'N1':
-							intersects[0].object.material.emissive.set(0xffffff);
-							console.log('clicked N1');
-							break; 
-							case 'N2':
-							intersects[0].object.material.emissive.set(0xffffff);
-							console.log('clicked N2');
-							break; 
-							case 'N3':
-							intersects[0].object.material.emissive.set(0xffffff);
-							console.log('clicked N3');
-							break; 
-							case 'N4':
-							intersects[0].object.material.emissive.set(0xffffff);
-							console.log('clicked N4');
-							break; 
+					
+					switch(expression) {
+    					case spheres[0]:
+        				spheres[0].object.material.color.set(0xff0000);
+      					  break;
+   					 case spheres[1]:
+        				spheres[1].object.material.color.set(0xff0000);
+     					 break;
+					 case spheres[2]:
+        				spheres[2].object.material.color.set(0xff0000);
+     					 break;
+					  case spheres[3]:
+        				spheres[3].object.material.color.set(0xff0000);
+     					 break;
+							
+   					 default:
+       					 //
+					}
+					
 					
 					}
 				}
