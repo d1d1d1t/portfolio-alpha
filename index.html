@@ -192,35 +192,31 @@ scene.add( torus );
 			
 				ray.setFromCamera(mouse, camera);
 				
-				var spheres = [];
-				
-				spheres[0] = nSphere1;
-				spheres[1] = nSphere2;
-				spheres[2] = nSphere3;
-				spheres[3] = nSphere4;
-		
+						
 					var intersects = ray.intersectObjects(scene.children);
 				
 				for (var i = 0; i < intersects.length; i++)
 				{
 					//intersects[i].object.material.color.set(0xff0000);
-					
-					switch(intersects) {
-    					case spheres[0]:
-        				spheres[0].object.material.color.set(0xff0000);
-      					  break;
-   					 case spheres[1]:
-        				spheres[1].object.material.color.set(0xff0000);
-     					 break;
-					 case spheres[2]:
-        				spheres[2].object.material.color.set(0xff0000);
-     					 break;
-					  case spheres[3]:
-        				spheres[3].object.material.color.set(0xff0000);
-     					 break;
+				if (intersects[i].object.geometry.type == 'SphereGeometry'){	
+					if(intersects == 0){
+        				intersects[0].object.material.color.set(0xff0000);
+						console.log(intersects[i].object.name);
+					}else	
+   					if(intersects == 1){
+        				intersects[1].object.material.color.set(0xff0000);
+						console.log(intersects[i].object.name);
+     						}else
+					if(intersects == 2){
+        				intersects[2].object.material.color.set(0xff0000);
+						console.log(intersects[i].object.name);
+     					 	}else
+					 if(intersects == 3){
+        				intersects[3].object.material.color.set(0xff0000);
+						 console.log(intersects[i].object.name);
+     					 	}
 							
-   					 default:
-       					 //
+   					
 					}
 					
 					
