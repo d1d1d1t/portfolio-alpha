@@ -113,7 +113,7 @@ scene.add( torus );
 			
 			
 			var navS2 = new THREE.SphereGeometry(  2, 24,24 );
-			var nsMat2 = new THREE.MeshPhongMaterial( {color: 0xff0000, alphaMap: plT6, emissiveMap: plT6, emissive: 0xff0000,emissiveIntensity:3, transparent: true} );
+			var nsMat2 = new THREE.MeshPhongMaterial( {color: 0x53abb5, alphaMap: plT6, emissiveMap: plT6, emissive: 0x53abb5,emissiveIntensity:3, transparent: true} );
 			var nSphere2 = new THREE.Mesh( navS2, nsMat2 );
 			scene.add( nSphere2 );
 					
@@ -122,7 +122,7 @@ scene.add( torus );
 			nSphere2.name = "N2";
 			
 			var navS3 = new THREE.SphereGeometry( 2, 24,24 );
-			var nsMat3 = new THREE.MeshPhongMaterial( {color: 0xadd8e6, alphaMap: plT6, emissiveMap: plT6, emissive: 0xadd8e6,emissiveIntensity:3, transparent: true} );
+			var nsMat3 = new THREE.MeshPhongMaterial( {color: 0x16f1b4, alphaMap: plT6, emissiveMap: plT6, emissive: 0x16f1b4,emissiveIntensity:3, transparent: true} );
 			var nSphere3 = new THREE.Mesh( navS3, nsMat3 );
 			scene.add( nSphere3 );
 			
@@ -131,7 +131,7 @@ scene.add( torus );
 			nSphere3.name = "N3";
 			
 			var navS4 = new THREE.SphereGeometry( 2, 24,24 );
-			var nsMat4 = new THREE.MeshPhongMaterial( {color: 0xffffff, alphaMap: plT6, emissiveMap: plT6, emissive: 0xffffff,emissiveIntensity:3, transparent: true} );
+			var nsMat4 = new THREE.MeshPhongMaterial( {color: 0xff0000, alphaMap: plT6, emissiveMap: plT6, emissive: 0xff0000,emissiveIntensity:3, transparent: true} );
 			var nSphere4 = new THREE.Mesh( navS4, nsMat4 );
 			scene.add( nSphere4 );
 						
@@ -200,19 +200,19 @@ scene.add( torus );
 					
 				 switch(intersects[ i ].object.geometry.type){
 					 case 'SphereGeometry':	
-					intersects[0].object.material.color.set(0xff0000);
+					intersects[0].object.material.color.set(0xffffff);
 						 console.log(intersects[0].object.name);
 						break;	
 						 case 'SphereGeometry':	
-					intersects[1].object.material.color.set(0xff0000);
+					intersects[1].object.material.color.set(0xffffff);
 						 console.log(intersects[1].object.name);
 						break;	
 						 case 'SphereGeometry':	
-					intersects[2].object.material.color.set(0xff0000);
+					intersects[2].object.material.color.set(0xffffff);
 						 console.log(intersects[2].object.name);
 						break;	
 						 case 'SphereGeometry':	
-					intersects[3].object.material.color.set(0xff0000);
+					intersects[3].object.material.color.set(0xffffff);
 						 console.log(intersects[3].object.name);
 						break;	
    					
