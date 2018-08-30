@@ -204,7 +204,7 @@ scene.add( torus );
 				 switch(intersects[ i ].object.geometry.type){
 					 case 'SphereGeometry':	
 					intersects[0].object.material.color.set(0xffffff);
-						nSphere1.material.map = n1Map;
+						nSphere1.material.map = new THREE.TextureLoader().load(n1Map);
 						 nSphere1.material.needsUpdate = true;
 						 console.log(intersects[0].object.name);
 						 console.log( intersects[0].object.material.map)
@@ -212,7 +212,7 @@ scene.add( torus );
 						 
 						 case 'SphereGeometry':	
 					intersects[1].object.material.color.set(0xffffff);
-						 nSphere2.material.map = n2Map;
+						 nSphere2.material.map = new THREE.TextureLoader().load(n2Map);
 						  nSphere2.material.needsUpdate = true;
 						 console.log(intersects[1].object.name);
 						 console.log( intersects[1].object.material.map)
@@ -220,7 +220,7 @@ scene.add( torus );
 						 
 						 case 'SphereGeometry':	
 					intersects[2].object.material.color.set(0xffffff);
-						nSphere3.material.map = n3Map;
+						nSphere3.material.map = new THREE.TextureLoader().load(n3Map);
 						nSphere3.material.needsUpdate = true;
 						 console.log(intersects[2].object.name);
 						 console.log( intersects[2].object.material.map)
@@ -228,7 +228,7 @@ scene.add( torus );
 						 
 						 case 'SphereGeometry':	
 					intersects[3].object.material.color.set(0xffffff);
-						nSphere4.material.map = n4Map;
+						nSphere4.material.map = new THREE.TextureLoader().load(n4Map);
 						  nSphere4.material.needsUpdate = true;
 						 console.log(intersects[3].object.name);
 						 console.log( intersects[3].object.material.map)
