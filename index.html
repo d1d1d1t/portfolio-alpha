@@ -97,14 +97,25 @@ scene.add( torus );
 			var plT7 = new THREE.TextureLoader().load( "textures/grid7-trs.jpg" );
 			var plT8 = new THREE.TextureLoader().load( "textures/grid8-trs.jpg" );
 			
-			var n1Map = new THREE.TextureLoader().load( "textures/planetTex1.jpg" ); 
-			var n2Map = new THREE.TextureLoader().load( "textures/planetTex2.jpg" );
-			var n3Map = new THREE.TextureLoader().load( "textures/planetTex3.jpg" );
-			var n4Map = new THREE.TextureLoader().load( "textures/planetTex4.jpg" )
+			var n1Map = new THREE.TextureLoader().load( "textures/planetTex1-albedo.jpg" ); 
+			var n2Map = new THREE.TextureLoader().load( "textures/planetTex2-albedo.jpg" );
+			var n3Map = new THREE.TextureLoader().load( "textures/planetTex3-albedo.jpg" );
+			var n4Map = new THREE.TextureLoader().load( "textures/planetTex4-albedo.jpg" );
+			
+			var n1BMap = new THREE.TextureLoader().load( "textures/planetTex1-bump.jpg" ); 
+			var n2BMap = new THREE.TextureLoader().load( "textures/planetTex2-bump.jpg" );
+			var n3BMap = new THREE.TextureLoader().load( "textures/planetTex3-bump.jpg" );
+			var n4BMap = new THREE.TextureLoader().load( "textures/planetTex4-bump.jpg" );
+			
+			var n1EMap = new THREE.TextureLoader().load( "textures/planetTex1-emission.jpg" ); 
+			var n2EMap = new THREE.TextureLoader().load( "textures/planetTex2-emission.jpg" );
+			var n3EMap = new THREE.TextureLoader().load( "textures/planetTex3-emission.jpg" );
+			var n4EMap = new THREE.TextureLoader().load( "textures/planetTex4-emission.jpg" );
+			
 			
 			
 			var navS1 = new THREE.SphereGeometry(  2, 24,24 );
-			var nsMat1 = new THREE.MeshLambertMaterial( {map: n1Map, emissiveMap: n1Map} );
+			var nsMat1 = new THREE.MeshLambertMaterial( {map: n1Map, emissiveMap: n1EMap, emissive:0xffc0cb bumpMap:n1BMap, specularMap:n1BMap } );
 			var nSphere1 = new THREE.Mesh( navS1, nsMat1 );
 			scene.add( nSphere1 );
 			
@@ -117,7 +128,7 @@ scene.add( torus );
 			
 			
 			var navS2 = new THREE.SphereGeometry(  2, 24,24 );
-			var nsMat2 = new THREE.MeshPhongMaterial( {map: n2Map, emissiveMap: n2Map} );
+			var nsMat2 = new THREE.MeshPhongMaterial( {map: n2Map, emissiveMap: n2EMap, emissive: 0x008080, bumpMap:n2BMap, specularMap:n2BMap} );
 			var nSphere2 = new THREE.Mesh( navS2, nsMat2 );
 			scene.add( nSphere2 );
 					
@@ -126,7 +137,7 @@ scene.add( torus );
 			nSphere2.name = "N2";
 			
 			var navS3 = new THREE.SphereGeometry( 2, 24,24 );
-			var nsMat3 = new THREE.MeshPhongMaterial( {map: n3Map, emissiveMap: n3Map} );
+			var nsMat3 = new THREE.MeshPhongMaterial( {map: n3Map, emissiveMap: n3EMap, emissive:0x6787b7 , bumpMap:n3BMap, specularMap:n3BMap} );
 			var nSphere3 = new THREE.Mesh( navS3, nsMat3 );
 			scene.add( nSphere3 );
 			
@@ -135,7 +146,7 @@ scene.add( torus );
 			nSphere3.name = "N3";
 			
 			var navS4 = new THREE.SphereGeometry( 2, 24,24 );
-			var nsMat4 = new THREE.MeshPhongMaterial( {map: n4Map, emissiveMap: n4Map} );
+			var nsMat4 = new THREE.MeshPhongMaterial( {map: n4Map, emissiveMap: n4EMap, emissive: 0xffa500, bumpMap:n4BMap, specularMap:n4BMap} );
 			var nSphere4 = new THREE.Mesh( navS4, nsMat4 );
 			scene.add( nSphere4 );
 						
