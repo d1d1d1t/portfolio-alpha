@@ -115,7 +115,7 @@ scene.add( torus );
 			
 			
 			var navS1 = new THREE.SphereGeometry(  2, 24,24 );
-			var nsMat1 = new THREE.MeshLambertMaterial( {map: n1Map, emissiveMap: n1EMap, emissive:0xffc0cb bumpMap:n1BMap, specularMap:n1BMap } );
+			var nsMat1 = new THREE.MeshPhongMaterial( {map: n1Map, emissiveMap: n1EMap, emissive:0xffc0cb bumpMap:n1BMap, specularMap:n1BMap } );
 			var nSphere1 = new THREE.Mesh( navS1, nsMat1 );
 			scene.add( nSphere1 );
 			
