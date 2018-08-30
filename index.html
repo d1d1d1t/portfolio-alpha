@@ -104,7 +104,7 @@ scene.add( torus );
 			
 			
 			var navS1 = new THREE.SphereGeometry(  2, 24,24 );
-			var nsMat1 = new THREE.MeshLambertMaterial( {map: n1Map} );
+			var nsMat1 = new THREE.MeshLambertMaterial( {map: n1Map, emissiveMap: n1Map} );
 			var nSphere1 = new THREE.Mesh( navS1, nsMat1 );
 			scene.add( nSphere1 );
 			
@@ -117,7 +117,7 @@ scene.add( torus );
 			
 			
 			var navS2 = new THREE.SphereGeometry(  2, 24,24 );
-			var nsMat2 = new THREE.MeshPhongMaterial( {map: n2Map} );
+			var nsMat2 = new THREE.MeshPhongMaterial( {map: n2Map, emissiveMap: n2Map} );
 			var nSphere2 = new THREE.Mesh( navS2, nsMat2 );
 			scene.add( nSphere2 );
 					
@@ -126,7 +126,7 @@ scene.add( torus );
 			nSphere2.name = "N2";
 			
 			var navS3 = new THREE.SphereGeometry( 2, 24,24 );
-			var nsMat3 = new THREE.MeshPhongMaterial( {map: n3Map} );
+			var nsMat3 = new THREE.MeshPhongMaterial( {map: n3Map, emissiveMap: n3Map} );
 			var nSphere3 = new THREE.Mesh( navS3, nsMat3 );
 			scene.add( nSphere3 );
 			
@@ -135,7 +135,7 @@ scene.add( torus );
 			nSphere3.name = "N3";
 			
 			var navS4 = new THREE.SphereGeometry( 2, 24,24 );
-			var nsMat4 = new THREE.MeshPhongMaterial( {map: n4Map} );
+			var nsMat4 = new THREE.MeshPhongMaterial( {map: n4Map, emissiveMap: n4Map} );
 			var nSphere4 = new THREE.Mesh( navS4, nsMat4 );
 			scene.add( nSphere4 );
 						
