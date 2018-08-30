@@ -171,7 +171,10 @@ scene.add( torus );
 				var ray = new THREE.Raycaster();
 				var mouse = new THREE.Vector2();
 			
-				
+				var n1Map = new THREE.TextureLoader().load( "textures/planetTex1.jpg" ); 
+				var n2Map = new THREE.TextureLoader().load( "textures/planetTex2.jpg" );
+				var n3Map = new THREE.TextureLoader().load( "textures/planetTex3.jpg" );
+				var n4Map = new THREE.TextureLoader().load( "textures/planetTex4.jpg" );
 			
 			document.addEventListener("click", function(){
 				
@@ -201,18 +204,29 @@ scene.add( torus );
 				 switch(intersects[ i ].object.geometry.type){
 					 case 'SphereGeometry':	
 					intersects[0].object.material.color.set(0xffffff);
+						 intersects[0].object.material.map.set(n1Map);
+						  intersects[0].material.map.needsUpdate = true;
 						 console.log(intersects[0].object.name);
 						break;	
+						 
 						 case 'SphereGeometry':	
 					intersects[1].object.material.color.set(0xffffff);
+						  intersects[0].object.material.map.set(n2Map);
+						  intersects[1].material.map.needsUpdate = true;
 						 console.log(intersects[1].object.name);
 						break;	
+						 
 						 case 'SphereGeometry':	
 					intersects[2].object.material.color.set(0xffffff);
+						  intersects[0].object.material.map.set(n3Map);
+						  intersects[2].material.map.needsUpdate = true;
 						 console.log(intersects[2].object.name);
 						break;	
+						 
 						 case 'SphereGeometry':	
 					intersects[3].object.material.color.set(0xffffff);
+						  intersects[0].object.material.map.set(n4Map);
+						  intersects[3].material.map.needsUpdate = true;
 						 console.log(intersects[3].object.name);
 						break;	
    					
