@@ -69,7 +69,7 @@ scene.add( pLight3 );
 var dome = new THREE.SphereGeometry(100000, 25, 25);
 var skLd = new THREE.TextureLoader(),
     skTex = skLd.load('textures/space3.jpg');
-var skMat = newTHREE.MeshPhongMaterial({map: skTex});
+var skMat = new THREE.MeshPhongMaterial({map: skTex});
 var skDome = new THREE.Mesh(dome, skMat);
  skDome.material.side = THREE.Backside;
 scene.add(skDome);			
