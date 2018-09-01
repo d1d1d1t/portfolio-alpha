@@ -65,14 +65,23 @@ pLight3.position.set( -10, 20, -40 );
 scene.add( pLight3 );
 			
 
-//Sky-Dome
-var dome = new THREE.SphereGeometry(15, 25, 25);
-var skLd = new THREE.TextureLoader(),
-    skTex = skLd.load('textures/space3.jpg');
-var skMat = new THREE.MeshPhongMaterial({map: skTex});
-var skDome = new THREE.Mesh(dome, skMat);
- skDome.material.side = THREE.Backside;
-scene.add(skDome);	
+// Load the background texture
+            var bgLoader = new THREE.TextureLoader();
+            var bgTex = loader.load( 'textures/stars_texture2956.jpg' );
+            var bgMesh = new THREE.Mesh(
+                new THREE.PlaneGeometry(2, 2, 0),
+                new THREE.MeshBasicMaterial({
+                    map: texture
+                }));
+
+            bgMesh.material.depthTest = false;
+            bgMesh.material.depthWrite = false;
+
+            // Create your background scene
+            var bgScene = new THREE.Scene();
+            var bgCamera = new THREE.Camera();
+            bgScene.add(bgCamera );
+            bgScene.add(bgMesh );
 			
 			
 			
@@ -298,6 +307,12 @@ scene.add( torus );
 				sphere.rotation.x += 0.01;
 				sphere.rotation.y += 0.01;
 
+				
+				
+    renderer.clear(); // <-
+    renderer.render(bgScene, bgCamera);
+    renderer.render( scene, camera );
+}
 				renderer.render( scene, camera );
 			};
 
