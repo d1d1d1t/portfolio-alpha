@@ -64,35 +64,23 @@ scene.add( pLight2 );
 pLight3.position.set( -10, 20, -40 );
 scene.add( pLight3 );
 			
-			//SkyBox
-			var geometry = new THREE.SphereGeometry(3000, 60, 40);  
-var uniforms = {  
-  texture: { type: 't', value: THREE.ImageUtils.loadTexture('textures/space3.jpg') }
-};
 
-var material = new THREE.ShaderMaterial( {  
-  uniforms:       uniforms,
-  vertexShader:   document.getElementById('sky-vertex').textContent,
-  fragmentShader: document.getElementById('sky-fragment').textContent
-});
-
-skyBox = new THREE.Mesh(geometry, material);  
-skyBox.scale.set(-1, 1, 1);  
-skyBox.eulerOrder = 'XZY';  
-skyBox.renderDepth = 1000.0;  
-scene.add(skyBox);  
+//Sky-Dome
+var dome = new THREE.SphereGeometry(100000, 25, 25);
+var skLd = new THREE.TextureLoader(),
+    skTex = skLd.load('textures/space3.jpg');
+var skMat = newTHREE.MeshPhongMaterial({map: skTex});
+var skDome = new THREE.Mesh(dome, skMat);
+var skDome.material.side = THREE.Backside;
+scene.add(skDome);			
 			
 			
-			
-	
-
 var spTex = new THREE.TextureLoader().load( "textures/dead-world.jpg" );
 var spEm = new THREE.TextureLoader().load( "textures/dead-world-em.jpg" );
 var spSpc = new THREE.TextureLoader().load( "textures/dead-world-spec.jpg" );
 var spBW = new THREE.TextureLoader().load( "textures/dead-world-b&w.jpg" );
 var spAltBW = new THREE.TextureLoader().load( "textures/dead-world-specular.jpg" );
-			
-
+		
 	
 		
 var spG = new THREE.SphereGeometry( 5, 32, 32);
