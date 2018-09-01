@@ -66,22 +66,17 @@ scene.add( pLight3 );
 			
 
 // Load the background texture
-            var bgLoader = new THREE.TextureLoader();
-            var bgTex = bgLoader.load( 'textures/space3.jpg' );
-            var bgMesh = new THREE.Mesh(
-                new THREE.PlaneGeometry(2, 2, 0),
-                new THREE.MeshBasicMaterial({
-                    map: bgTex
-                }));
+			var bgTex = new THREE.TextureLoader().load( "textures/space3.jpg" );
+           var bgMesh = new THREE.PlaneBufferGeometry( 5, 20, 32 );
+var bgMat = new THREE.MeshBasicMaterial( {color: 0xffff00, map: bgTex,  side: THREE.DoubleSide} );
+var bgPlane = new THREE.Mesh( bgMesh, bgMat );
 
-            bgMesh.material.depthTest = false;
-            bgMesh.material.depthWrite = false;
 
             // Create your background scene
-            var bgScene = new THREE.Scene();
-            var bgCamera = new THREE.Camera();
-            bgScene.add(bgCamera );
-            bgScene.add(bgMesh );
+           
+          scene.add(bgPlane);
+			
+			
 			
 			
 			
