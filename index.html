@@ -68,7 +68,7 @@ scene.add( pLight3 );
 // Load the background texture
 			var bgTex = new THREE.TextureLoader().load( "textures/space3.jpg" );
            var bgMesh = new THREE.PlaneBufferGeometry( 30, 30, 32 );
-var bgMat = new THREE.MeshBasicMaterial( {color: 0xffff00, map: bgTex,  side: THREE.DoubleSide} );
+var bgMat = new THREE.MeshBasicMaterial( { map: bgTex,  side: THREE.DoubleSide} );
 var bgPlane = new THREE.Mesh( bgMesh, bgMat );
 
 
