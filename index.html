@@ -67,11 +67,11 @@ scene.add( pLight3 );
 
 // Load the background texture
             var bgLoader = new THREE.TextureLoader();
-            var bgTex = bgLoader.load( 'textures/stars_texture2956.jpg' );
+            var bgTex = bgLoader.load( 'textures/space3.jpg' );
             var bgMesh = new THREE.Mesh(
                 new THREE.PlaneGeometry(2, 2, 0),
                 new THREE.MeshBasicMaterial({
-                    map: texture
+                    map: bgTex
                 }));
 
             bgMesh.material.depthTest = false;
