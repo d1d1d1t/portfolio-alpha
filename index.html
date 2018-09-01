@@ -67,12 +67,12 @@ scene.add( pLight3 );
 
 //background
 var cubeLd = new THREE.CubeTextureLoader();
-cubeLd.setPath( 'textures/' );
+
 
 var cubeTex = cubeLd.load( [
-	'sp3x1.png', 'sp3x2.png',
-	'sp3y1.png', 'sp3y2.png',
-	'sp3z1.png', 'sp3z2.png'
+	'texures/sp3x1.png', 'texures/sp3x2.png',
+	'texures/sp3y1.png', 'texures/sp3y2.png',
+	'texures/sp3z1.png', 'texures/sp3z2.png'
 ] );
 
 var cubeMat = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: cubeTex } );
