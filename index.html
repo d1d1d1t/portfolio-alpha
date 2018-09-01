@@ -65,19 +65,19 @@ pLight3.position.set( -10, 20, -40 );
 scene.add( pLight3 );
 			
 
-// Load the background texture
-			var bgTex = new THREE.TextureLoader().load( "textures/space3.jpg" );
-           var bgMesh = new THREE.PlaneBufferGeometry( 90, 45, 32 );
-var bgMat = new THREE.MeshBasicMaterial( { map: bgTex,  side: THREE.DoubleSide} );
-var bgPlane = new THREE.Mesh( bgMesh, bgMat );
+//background
+var cubeLd = new THREE.CubeTextureLoader();
+loader.setPath( 'textures/' );
 
+var cubeTex = loader.load( [
+	'sp3x1.png', 'sp3x2.png',
+	'sp3y1.png', 'sp3y2.png',
+	'sp3z1.png', 'sp3z2.png'
+] );
 
-            // Create your background scene
-           
-          scene.add(bgPlane);
-			
-			
-			
+var cubeMat = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: cubeTex } );
+
+scene.backgroundSphere = true;			
 			
 			
 			
