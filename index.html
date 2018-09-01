@@ -69,7 +69,7 @@ scene.add( pLight3 );
 var cubeLd = new THREE.CubeTextureLoader();
 cubeLd.setPath( 'textures/' );
 
-var cubeTex = loader.load( [
+var cubeTex = cubeLd.load( [
 	'sp3x1.png', 'sp3x2.png',
 	'sp3y1.png', 'sp3y2.png',
 	'sp3z1.png', 'sp3z2.png'
