@@ -71,7 +71,7 @@ var skLd = new THREE.TextureLoader(),
     skTex = skLd.load('textures/space3.jpg');
 var skMat = new THREE.MeshPhongMaterial({map: skTex});
 var skDome = new THREE.Mesh(dome, skMat);
- skDome.material.side = THREE.Backside;
+ //skDome.material.side = THREE.Backside;
 scene.add(skDome);			
 			
 			
