@@ -134,6 +134,11 @@ scene.add( torus );
 			var n4BWMap = new THREE.TextureLoader().load( "textures/planetTex4-b&w.jpg" );
 			
 			
+			var n2NMap = new THREE.TextureLoader().load( "textures/planet2-norm.jpg" );
+			var n3NMap = new THREE.TextureLoader().load( "textures/planet3-norm.jpg" );
+			var n4NMap = new THREE.TextureLoader().load( "textures/planet4-norm.jpg" )
+			
+			
 			
 			var navS1 = new THREE.SphereGeometry(  2, 24,24 );
 			var nsMat1 = new THREE.MeshPhongMaterial( {map: n1BWMap, emissiveMap: n1BWMap, emissive: 0xffffff, emissiveIntensity: .40, bumpMap: n1BWMap, bumpIntensity: .05} );
@@ -149,7 +154,7 @@ scene.add( torus );
 			
 			
 			var navS2 = new THREE.SphereGeometry(  2, 24,24 );
-			var nsMat2 = new THREE.MeshPhongMaterial( {map: n2BWMap, emissiveMap: n2BWMap, emissive: 0xffffff, emissiveIntensity: .40, bumpMap: n2BWMap, bumpIntensity: .05} );
+			var nsMat2 = new THREE.MeshPhongMaterial( {map: n2BWMap, emissiveMap: n2BWMap, emissive: 0xffffff, emissiveIntensity: .40, bumpMap: n2BWMap, bumpIntensity: .05, normalMap: n2NMap} );
 			var nSphere2 = new THREE.Mesh( navS2, nsMat2 );
 			scene.add( nSphere2 );
 					
@@ -158,7 +163,7 @@ scene.add( torus );
 			nSphere2.name = "N2";
 			
 			var navS3 = new THREE.SphereGeometry( 2, 24,24 );
-			var nsMat3 = new THREE.MeshPhongMaterial( {map: n3BWMap, emissiveMap: n3BWMap, emissive: 0xffffff, emissiveIntensity: .40, bumpMap: n3BWMap, bumpIntensity: .05} );
+			var nsMat3 = new THREE.MeshPhongMaterial( {map: n3BWMap, emissiveMap: n3BWMap, emissive: 0xffffff, emissiveIntensity: .40, bumpMap: n3BWMap, bumpIntensity: .05, normalMap: n3NMap} );
 			var nSphere3 = new THREE.Mesh( navS3, nsMat3 );
 			scene.add( nSphere3 );
 			
@@ -167,7 +172,7 @@ scene.add( torus );
 			nSphere3.name = "N3";
 			
 			var navS4 = new THREE.SphereGeometry( 2, 24,24 );
-			var nsMat4 = new THREE.MeshPhongMaterial( {map: n4BWMap, emissiveMap: n4BWMap, emissive: 0xffffff, emissiveIntensity: .40, bumpMap: n4BWMap, bumpIntensity: .05} );
+			var nsMat4 = new THREE.MeshPhongMaterial( {map: n4BWMap, emissiveMap: n4BWMap, emissive: 0xffffff, emissiveIntensity: .40, bumpMap: n4BWMap, bumpIntensity: .05, normalMap: n4NMap} );
 			var nSphere4 = new THREE.Mesh( navS4, nsMat4 );
 			scene.add( nSphere4 );
 						
