@@ -174,11 +174,11 @@ scene.add( torus );
 			
 			
 			
-			var plnTex = new THREE.TextureLoader().load( "textures/solar-eclipse.png" );
-			var plnGeo = new THREE.PlaneGeometry( 15, 13, 32 );
-			var plnMat = new THREE.MeshBasicMaterial( {map: plnTex, side: THREE.DoubleSide} );
-			var pln = new THREE.Mesh( plnGeo, plnMat );
-			scene.add( pln );
+			var circTex = new THREE.TextureLoader().load( "textures/solar-eclipse.png" );
+			var circGeo = new THREE.CircleGeometry( 15, 13 );
+			var circMat = new THREE.MeshBasicMaterial( {map: plnTex, side: THREE.DoubleSide} );
+			var circ = new THREE.Mesh( circGeo, circMat );
+			scene.add( circ );
 
 			
 			
