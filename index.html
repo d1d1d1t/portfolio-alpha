@@ -136,7 +136,7 @@ scene.add( torus );
 			
 			
 			var navS1 = new THREE.SphereGeometry(  2, 24,24 );
-			var nsMat1 = new THREE.MeshPhongMaterial( {map: n1BWMap, emissiveMap: n1BWMap, emissive: 0xffc0cb, emissiveIntensity: .25, bumpMap: n1BWMap,  specularMap:n1BWMap } );
+			var nsMat1 = new THREE.MeshPhongMaterial( {map: n1BWMap, emissiveMap: n1BWMap, emissive: 0xffc0cb, emissiveIntensity: .25, bumpMap: n1BWMap, bumpIntensity: .10,  specularMap:n1BWMap } );
 			var nSphere1 = new THREE.Mesh( navS1, nsMat1 );
 			scene.add( nSphere1 );
 			
@@ -149,7 +149,7 @@ scene.add( torus );
 			
 			
 			var navS2 = new THREE.SphereGeometry(  2, 24,24 );
-			var nsMat2 = new THREE.MeshPhongMaterial( {map: n2BWMap, emissiveMap: n2BWMap, emissive: 0x008080, emissiveIntensity: .25, bumpMap: n2BWMap, specularMap:n2BWMap} );
+			var nsMat2 = new THREE.MeshPhongMaterial( {map: n2BWMap, emissiveMap: n2BWMap, emissive: 0x008080, emissiveIntensity: .25, bumpMap: n2BWMap, bumpIntensity: .10, specularMap:n2BWMap} );
 			var nSphere2 = new THREE.Mesh( navS2, nsMat2 );
 			scene.add( nSphere2 );
 					
@@ -158,7 +158,7 @@ scene.add( torus );
 			nSphere2.name = "N2";
 			
 			var navS3 = new THREE.SphereGeometry( 2, 24,24 );
-			var nsMat3 = new THREE.MeshPhongMaterial( {map: n3BWMap, emissiveMap: n3BWMap, emissive:0x6787b7 , emissiveIntensity: .25, bumpMap: n3BWMap,  specularMap:n3BWMap} );
+			var nsMat3 = new THREE.MeshPhongMaterial( {map: n3BWMap, emissiveMap: n3BWMap, emissive:0x6787b7 , emissiveIntensity: .25, bumpMap: n3BWMap, bumpIntensity: .10, specularMap:n3BWMap} );
 			var nSphere3 = new THREE.Mesh( navS3, nsMat3 );
 			scene.add( nSphere3 );
 			
@@ -167,7 +167,7 @@ scene.add( torus );
 			nSphere3.name = "N3";
 			
 			var navS4 = new THREE.SphereGeometry( 2, 24,24 );
-			var nsMat4 = new THREE.MeshPhongMaterial( {map: n4BWMap, emissiveMap: n4BWMap, emissive: 0xffa500, emissiveIntensity: .25, bumpMap: n4BWMap,   specularMap:n4BWMap} );
+			var nsMat4 = new THREE.MeshPhongMaterial( {map: n4BWMap, emissiveMap: n4BWMap, emissive: 0xffa500, emissiveIntensity: .25, bumpMap: n4BWMap, bumpIntensity: .10,  specularMap:n4BWMap} );
 			var nSphere4 = new THREE.Mesh( navS4, nsMat4 );
 			scene.add( nSphere4 );
 						
