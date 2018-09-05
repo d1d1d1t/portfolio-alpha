@@ -66,19 +66,20 @@ scene.add( pLight3 );
 			
 
 //background
-var cubeLd = new THREE.CubeTextureLoader();
+//var cubeLd = new THREE.CubeTextureLoader();
 
+var cubeImg = new THREE.TextureLoader().load( "textures/space4.jpg" );
+			
+//var cubeTex = cubeLd.load( [
+	//'textures/seamless space_0.png', 'textures/seamless space_0.png',
+	//'textures/seamless space_0.png', 'textures/seamless space_0.png',
+	//'textures/seamless space_0.png', 'textures/seamless space_0.png'
+//] );
 
-var cubeTex = cubeLd.load( [
-	'textures/seamless space_0.png', 'textures/seamless space_0.png',
-	'textures/seamless space_0.png', 'textures/seamless space_0.png',
-	'textures/seamless space_0.png', 'textures/seamless space_0.png'
-] );
+//var cubeMat = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: cubeTex } );
 
-var cubeMat = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: cubeTex } );
-
-scene.backgroundSphere = true;
-scene.background = cubeTex;			
+//scene.backgroundSphere = true;
+scene.background = cubeImg;			
 			
 			
 			
