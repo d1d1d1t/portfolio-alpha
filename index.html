@@ -239,6 +239,9 @@ scene.add( torus );
 				var bPanel = document.getElementById('b-panel');
 				var tPanel = document.getElementById('t-panel');
 			
+			
+				
+			
 			function render(){
 			
 				ray.setFromCamera(mouse, camera);
@@ -253,8 +256,7 @@ scene.add( torus );
 				 switch(intersects[ i ].object.geometry.type){
 					 case 'SphereGeometry':	
 					intersects[0].object.material.color.set(0xffffff);
-						 tPanel.style.opacity = "1";
-						  bPanel.style.opacity = "0";
+					
 						intersects[0].object.material.map = spTex;
 						 intersects[0].object.material.emissiveMap = spEm;
 						intersects[0].object.material.specularMap = spAltBW;
@@ -265,8 +267,7 @@ scene.add( torus );
 						 
 						 case 'SphereGeometry':	
 					intersects[1].object.material.color.set(0xffffff);
-						  lPanel.style.opacity = "1";
-						  rPanel.style.opacity = "0";
+						  
 						intersects[1].object.material.map = spTex;
 						  intersects[1].object.material.emissiveMap = spEm;
 						  intersects[1].object.material.specularMap = spAltBW;
@@ -277,8 +278,7 @@ scene.add( torus );
 						 
 						 case 'SphereGeometry':	
 					intersects[2].object.material.color.set(0xffffff);
-						  bPanel.style.opacity = "1";
-						  tPanel.style.opacity = "0";
+						
 						intersects[2].object.material.map = spTex;
 						  intersects[2].object.material.emissiveMap = spEm;
 						  intersects[2].object.material.specularMap = spAltBW;
@@ -289,8 +289,7 @@ scene.add( torus );
 						 
 						 case 'SphereGeometry':	
 					intersects[3].object.material.color.set(0xffffff);
-						 rPanel.style.opacity = "1";
-						  lPanel.style.opacity = "0";
+						
 						intersects[3].object.material.map = spTex;
 						  intersects[3].object.material.emissiveMap = spEm;
 						intersects[3].object.material.specularMap = spAltBW;
