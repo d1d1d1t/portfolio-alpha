@@ -234,16 +234,16 @@ scene.add( torus );
 					
 			});
 			
-			
+				var lPanel = document.GetElemntById('l-panel'); 
+				var rPanel = document.GetElemntById('r-panel');
+				var bPanel = document.GetElemntById('b-panel');
+				var tPanel = document.GetElemntById('t-panel');
 			
 			function render(){
 			
 				ray.setFromCamera(mouse, camera);
 					
-				var lPanel = document.GetElemntById('l-panel'); 
-				var rPanel = document.GetElemntById('r-panel');
-				var bPanel = document.GetElemntById('b-panel');
-				var tPanel = document.GetElemntById('t-panel');
+				
 						
 					var intersects = ray.intersectObjects(scene.children);
 				
