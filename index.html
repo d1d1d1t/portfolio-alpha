@@ -246,14 +246,19 @@ scene.add( torus );
 			
 				ray.setFromCamera(mouse, camera);
 					
-					var intObjs = new Array(nSphere1, nSphere2, nSphere3, nSphere4); 
+					var intObjs =[];
+				
 						
 					var intersects = ray.intersectObjects(intObjs);
 				
 				for (var i = 0; i < intersects.length; i++)
 				{
+						intObjs[0] = nSphere1;
+						intObjs[1] = nSphere2;
+						intObjs[2] = nSphere3;
+						intObjs[3] = nSphere4;
 					
-				 switch(intersects[ i ].object.name){
+				 switch(intersects[ intObjs ].object.name){
 					 case 'N1':	
 					intersects[0].object.material.color.set(0xffffff);
 					
