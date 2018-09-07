@@ -246,21 +246,17 @@ scene.add( torus );
 			
 				ray.setFromCamera(mouse, camera);
 					
-					var intObjs =[];
+					
 				
 						
-					var intersects = ray.intersectObjects(intObjs);
+					var intersects = ray.intersectObjects(scene.children);
 				
 				for (var i = 0; i < intersects.length; i++)
 				{
-						intObjs[0] = nSphere1;
-						intObjs[1] = nSphere2;
-						intObjs[2] = nSphere3;
-						intObjs[3] = nSphere4;
 					
-				 switch(intersects[ intObjs ].object.geometry.type){
+				 switch(intersects[  ].object.name){
 					 case 'N1':	
-					//intersects[0].object.material.color.set(0xffffff);
+					intersects[0].object.material.color.set(0xffffff);
 					
 						intersects[0].object.material.map = spTex;
 						 intersects[0].object.material.emissiveMap = spEm;
@@ -271,7 +267,7 @@ scene.add( torus );
 						break;	
 						 
 						 case 'N2':	
-					//intersects[1].object.material.color.set(0xffffff);
+					intersects[1].object.material.color.set(0xffffff);
 						  
 						intersects[1].object.material.map = spTex;
 						  intersects[1].object.material.emissiveMap = spEm;
@@ -282,7 +278,7 @@ scene.add( torus );
 						break;	
 						 
 						 case 'N3':	
-					//intersects[2].object.material.color.set(0xffffff);
+					intersects[2].object.material.color.set(0xffffff);
 						
 						intersects[2].object.material.map = spTex;
 						  intersects[2].object.material.emissiveMap = spEm;
@@ -293,7 +289,7 @@ scene.add( torus );
 						break;	
 						 
 						 case 'N4':	
-					//intersects[3].object.material.color.set(0xffffff);
+					intersects[3].object.material.color.set(0xffffff);
 						
 						intersects[3].object.material.map = spTex;
 						  intersects[3].object.material.emissiveMap = spEm;
